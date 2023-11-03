@@ -13,19 +13,22 @@ func main(){
     log.SetPrefix("greetings: ")
     log.SetFlags(0)
 
-	message, err := greetings.Hello("Ace")
+    // A slice of names.
+    names := []string {"Ace", "Eduardo", "Mark"}
+
+    // Request greeting messages for the names.
+	messages, err := greetings.HelloMultiple(names)
 	// If an error was returned, print it to the console and
     // exit the program.
     if err != nil {
         log.Fatal(err)
     }
 
-    // If no error was returned, print the returned message
+    // If no error was returned, print the returned messages
     // to the console.
-
-
-
-	fmt.Println(message)
+    for _, message := range messages {
+        fmt.Println(message)
+    }
 }
 
 // go mod edit -replace upsxace/greetings=../greetings
