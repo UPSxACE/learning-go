@@ -21,12 +21,25 @@ var i,o,p bool
 
 var variableWithInitializer, var2, var3 = 1, true, []string{"a","b"}
 
+var (
+	varA string = "yo"
+	varB int = 1343
+)
+
+var floatNum float64 = 5;
+
+
 func main() {
 	canOnlyDeclareThisWayInsideFunctions := 123456
 
 	converted := float64(523)
 
 	const Truth = true
+
+	ac,ad := 1,2
+
+	fmt.Println(ac,ad)
+
 	fmt.Println("Go rules?", Truth)
 
 	fmt.Println(sum("afsaf","asgasg"))
